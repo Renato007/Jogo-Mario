@@ -20,6 +20,13 @@
     right: -80px;
 
 }
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
 /*  */
 @keyframes pipe-animation {
     from{
