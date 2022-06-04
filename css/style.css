@@ -25,7 +25,10 @@
     width: 150px;
     position: absolute;
     bottom: 0;
+}
+.jump{
     animation: jump 500ms ease-out; /* ease-out deixa a volta mais suave */
+
 }
 
 /*  */
