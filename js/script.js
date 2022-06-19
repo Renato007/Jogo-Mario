@@ -1,5 +1,6 @@
 const mario = document.querySelector(".mario");
 const pipe = document.querySelector(".pipe");
+const nuvem = document.querySelector(".cloud");
 
 const jump = () =>{
     mario.classList.add('jump');
@@ -10,7 +11,10 @@ const jump = () =>{
 }
 const loop = setInterval(() =>{
  const pipePosition = pipe.offsetLeft;
+
+
  const marioPosition = Number(window.getComputedStyle(mario).bottom.replace("px",''));
+ const nuvemPosition = Number(window.getComputedStyle(nuvem).left.replace("px",''));
 
  if(pipePosition <= 120 && pipePosition > 0  && marioPosition < 80){
 
@@ -20,9 +24,15 @@ const loop = setInterval(() =>{
     mario.style.animation ='none';
     mario.style.bottom = `${marioPosition}px`
 
+    nuvem.style.animation ='none';
+    nuvem.style.left = `${nuvemPosition}px`
+
+
     mario.src = './img/game-over.png'
     mario.style.width ='75px'
     mario.style.marginLeft ='50px'
+
+    clearInterval(loop);
  }
 
 }, 10);
